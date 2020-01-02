@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# xmake script
+xmake.lua
+.xmake/*
+build/*
+# temp vscode files
+.vscode/*
