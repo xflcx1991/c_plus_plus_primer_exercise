@@ -37,3 +37,6 @@ xmake.lua
 build/*
 # temp vscode files
 .vscode/*
+
+# other
+test.cpp

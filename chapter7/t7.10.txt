@@ -1,0 +1,2 @@
+连续两个read是在模拟 cin >> x >> xx 这种链式写法
+if是在判断cin有没有读到文件尾标志 EOF(end-of-file)

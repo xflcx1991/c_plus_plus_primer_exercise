@@ -1,0 +1,2 @@
+区别不大，两者默认访问权限不一样。
+没有访问说明符修饰的成员struct是public，class是private
