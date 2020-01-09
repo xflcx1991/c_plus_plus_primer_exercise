@@ -1,7 +1,8 @@
-//在7.21基础上改
+//在7.26基础上改
 #include <istream>
 #include <ostream>
 #include <string>
+#include <iostream>
 
 class Sales_data
 {
@@ -10,8 +11,7 @@ class Sales_data
     friend std::istream &read(std::istream &, Sales_data &);
 
 public:
-    //新增的构造函数
-    Sales_data() = default;
+    Sales_data();
     Sales_data(const std::string &s);
     Sales_data(const std::string &s, unsigned n, double p);
     Sales_data(std::istream &is);
@@ -35,16 +35,24 @@ std::ostream &print(std::ostream &, const Sales_data &);
 std::istream &read(std::istream &, Sales_data &);
 //----------声明结束-----------------
 
-Sales_data::Sales_data(const std::string &s) : bookNo(s)
+Sales_data::Sales_data(): Sales_data("<->")
 {
+    std::cout << "Sales_data()" << std::endl;
+}
+
+Sales_data::Sales_data(const std::string &s) : Sales_data(s, 0, 0)
+{
+    std::cout << "Sales_data(const std::string &s)" << std::endl;
 }
 
 Sales_data::Sales_data(const std::string &s, unsigned n, double p) : bookNo(s), units_sold(n), revenue(p * n)
 {
+    std::cout << "Sales_data(const std::string &s, unsigned n, double p)" << std::endl;
 }
 
 Sales_data::Sales_data(std::istream &is)
 {
+    std::cout << "Sales_data(std::istream &is)" << std::endl;
     read(is, *this);
 }
 

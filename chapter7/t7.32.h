@@ -11,7 +11,7 @@ public:
     Window_mgr() = default;
     Window_mgr(Screen &);
 
-private:
+public:
     std::vector<Screen> screens;
 };
 
@@ -35,12 +35,16 @@ public:
     Screen &move(pos r, pos c);
     Screen &set(char ch);
     Screen &display(std::ostream &os);
-
+    
 private:
     pos cursor = 0;
     pos height = 0;
     pos width = 0;
     std::string contents;
+    pos size() const
+    {
+        return height * width;
+    }
 };
 
 Screen::Screen(pos ht, pos wd)
@@ -83,6 +87,11 @@ Screen &Screen::display(std::ostream &os)
     return *this;
 }
 
+// pos Screen::size() const
+// {
+//     return height * width;
+// }
+
 Window_mgr::Window_mgr(Screen& screen)
 {
     screens.push_back(screen);
@@ -93,3 +102,4 @@ void Window_mgr::clear(ScreenIndex index)
     Screen &s = screens[index];
     s.contents = std::string(s.height * s.width, ' ');
 }
+

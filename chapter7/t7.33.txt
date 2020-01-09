@@ -1,0 +1,4 @@
+如果在类内部写，没有问题
+如果在类外部写，会说 pos未声明
+改成
+Screen::pos Screen::size() const{}

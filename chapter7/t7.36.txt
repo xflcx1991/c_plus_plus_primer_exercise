@@ -1,0 +1,2 @@
+int rem, base; ------------> int base, rem;
+调整变量声明顺序

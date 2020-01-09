@@ -1,0 +1,11 @@
+Sales_data(const std::string &s = "default");
+Sales_data(std::istream &is = std::cin);
+如上所述。分情况：
+1. 如果外界调用者使用了无参的形势，那就会报错，有二义性
+Sales_data sd();
+2. 如果外界调用者使用了参数，那就不报错
+Sales_data next("aaa");
+Sales_data next2(std::cin);
+
+但是！ 这非常的危险，因为类的设计者没法确保使用者一定按照希望的方式调用。
+所以这种形式非常危险，这实际上是设计了多个默认构造函数。

@@ -1,0 +1,22 @@
+有报错。
+类外部的函数定义改为
+Exercise::Type Exercise::setVal(Type parm)
+---------------------------------
+typedef string Type;
+Type initVal(); --------------->string
+
+class Exercise
+{
+public:
+    typedef double Type;
+    Type setVal(Type); ----------->两个都是double
+    Type initVal(); -------------->double
+private:
+    int val;
+};
+
+Type Exercise::setVal(Type parm) ----->第一个Type指的是string，第二个Type指的是double
+{
+    val = parm + initVal();
+    return val;
+}

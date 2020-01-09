@@ -1,0 +1,3 @@
+不合法。因为NoDefault没有提供默认构造函数，如果想让这条声明通过，需要
+加上默认构造函数
+    NoDefault() = default;
