@@ -1,0 +1,64 @@
+#include <string>
+#include <iostream>
+
+class Account
+{
+public:
+    Account();
+    Account(const std::string &owner);
+    Account(const std::string &owner, const double &amount);
+
+    const std::string& getOwner();
+    const double& getAmount();
+    static const double& getInterestRate();
+
+    static void setInterestRate(const double& rate);
+
+    void display();
+private:
+    std::string owner;
+    double amount;
+    static double interestRate;
+};
+
+double Account::interestRate = 0;
+
+Account::Account():Account("", 0.0)
+{
+
+}
+
+Account::Account(const std::string &owner) : Account(owner, 0.0)
+{
+}
+
+Account::Account(const std::string &owner, const double &amount) : owner(owner), amount(amount)
+{
+}
+
+const std::string& Account::getOwner()
+{
+    return owner;
+}
+
+
+const double& Account::getAmount()
+{
+    return amount;
+}
+
+
+const double& Account::getInterestRate()
+{
+    return interestRate;
+}
+
+void Account::setInterestRate(const double& rate)
+{
+    interestRate = rate;
+}
+
+void Account::display()
+{
+    std::cout << owner << "---" << amount << "---" << Account::interestRate << std::endl; //显式使用静态变量
+}

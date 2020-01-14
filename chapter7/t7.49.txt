@@ -1,0 +1,13 @@
+当构造函数没有 explicit 时，i.combine(s)
+Sales_data& combine(Sales_data);
+combine调用发生隐式转换 s:string --> 临时对象:Sales_data
+
+Sales_data& combine(Sales_data&);
+编译报错。s可以隐式转换成 Sales_data 类型的临时变量，但是「临时变量不能作为非const引用」
+
+Sales_data &combine(const Sales_data &) const;
+编译报错，在const成员函数里 this指针是const的，const X* const，指向的这种对象是不可修改的。然而返回值声明却是“Sales_data &” 非常量引用，类型不匹配，报错。
+报错信息：
+binding ‘const Sales_data’ to reference of type ‘Sales_data&’ discards qualifiers
+=============================================
+当构造函数有 explicit 时，i.combine(s)报错，根本不允许 string --> Sales_data 的隐式转换

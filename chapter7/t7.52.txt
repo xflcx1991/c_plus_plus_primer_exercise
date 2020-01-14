@@ -1,0 +1,15 @@
+struct Sales_data
+{
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+
+编译报错。因为 Sales_data 不是聚合类。
+去掉units_sold和revenue 类内初始化就可以了
+struct Sales_data
+{
+    std::string bookNo;
+    unsigned units_sold;
+    double revenue;
+};

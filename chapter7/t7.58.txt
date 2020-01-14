@@ -1,0 +1,17 @@
+class Example
+{
+    public:
+
+    static constexpr double rate = 6.5;
+    //要求初始值是 const 整型，但gcc 5.4可以通过
+    //应该是编译器feature，但不符合标准
+
+    static constexpr int vecSize = 20;
+    //没问题
+
+    static vector<double> vec(vecSize);
+    //编译报错，vec会被解释为函数，模板不能类内初始化
+};
+
+constexpr double Example::rate;
+// vector<double> Example::vec;

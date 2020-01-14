@@ -1,0 +1,6 @@
+应该是 explicit，否则的话可能意外的使用string变量对Sales_data对象赋值，造成
+原本没想到的效果。
+并且
+Sales_data sd = string("10001");
+这种写法在没有 explicit 的时候居然是合法的，太不直观。
+PS. C++真的是多了好多规则，没有 Java 规则的简洁。

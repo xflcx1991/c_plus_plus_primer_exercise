@@ -1,0 +1,14 @@
+string null_isbn("9-999-99999-9"); 
+/新建1个变量，它的内容是 9-999-99999-9
+
+Sales_data item1(null_isbn);
+//定义了一个 Sales_data 类型的变量item1，使用构造函数 Sales_data(const std::string &s);
+// 它的 bookNo 是 9-999-99999-9，另外两个是0
+
+Sales_data item2("9-999-99999-9");
+//定义了一个 Sales_data 类型的变量item2，"9-999-99999-9" 先隐式转换成 string，再使用构造函数 Sales_data(const std::string &s);
+// 它的 bookNo 是 9-999-99999-9，另外两个是0
+
+用了 explicit 对本例两个新建的类变量没有什么影响。
+就是不能再使用如下写法。
+Sales_data item3 = null_isbn;

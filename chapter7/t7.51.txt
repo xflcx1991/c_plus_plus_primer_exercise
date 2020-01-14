@@ -1,0 +1,11 @@
+应该是为了方便理解，所以添加了这样的设定。
+
+因为vector接受一个容量参数的构造函数如果不是explicit的，那么就允许这样初始化：vector<int> ivec = 10;
+意思就是初始化ivec为10个0，这样太让人迷惑了。所以定义成explicit比较好，不允许这样的写法。但是string s = "aaa"还是很好理解的。
+————————————————
+版权声明：本文为CSDN博主「听枫烨阁」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/chxw098/article/details/40322521
+
+另外可看
+https://blog.csdn.net/weixin_30929195/article/details/96669443
+这里的外国网友的回复。
