@@ -40,3 +40,5 @@ build/*
 
 # other
 test.cpp
+lib/*
+include/*

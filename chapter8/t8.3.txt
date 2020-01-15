@@ -1,0 +1,1 @@
+遇到badbit（流已崩溃）、failbit（IO操作失败）、eofbit（到达文件结束）均会导致循环结束
