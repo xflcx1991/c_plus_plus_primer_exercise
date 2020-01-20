@@ -1,0 +1,4 @@
+begin:依据情况返回iterator或const_iterator
+cbegin:返回const_iterator
+
+最佳实践：需要修改时用begin，只读时用const_iterator

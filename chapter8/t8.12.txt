@@ -1,0 +1,8 @@
+因为没有必要，事实上也不知道该初始化为何值，而默认初始化就工作的很好。
+name会是空字符串，phones会是空的集合。
+虽然语法上可以类内初始化，如下：
+struct PersonInfo
+{
+    string name = "hehehe";
+    vector<string> phones = {"123", "456"};
+};

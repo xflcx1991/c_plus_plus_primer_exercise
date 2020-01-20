@@ -1,0 +1,14 @@
+vector<string> l1; //容器为空
+
+vector<string> l2(l3); //l2初始化为l3的拷贝
+vector<string> l2 = l3;
+
+vector<string> l4{"apple","banana","chery"}; //l4初始化为3个元素的容器，元素的类型是string
+vector<string> l4 = {"apple","banana","chery"};
+
+auto head = l4.cbegin();
+auto tail = l4.cend()-1;
+vector<string> l5(head, tail); //l5使用l4的前两个元素初始化
+
+vector<string> l6(10); //10个元素的容器，每个元素类型是string，内容是空字符串
+vector<string> l7(10, "apple"); //10个元素的容器，每个元素类型是string，内容均是apple

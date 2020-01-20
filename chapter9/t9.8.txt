@@ -1,0 +1,2 @@
+std::list<std::string>::iterator || std::list<std::string>::const_iterator; //read
+std::list<std::string>::iterator; //write
