@@ -1,0 +1,5 @@
+elem1和elem2相等，会什么都不做，一个都不删除。
+elem2是尾后迭代器，编译报错，类型不匹配
+两个都是尾后迭代器，还是编译报错，因为接受两个参数的 erase 函数只有这样的声明
+iterator erase( iterator first, iterator last );
+iterator erase( const_iterator first, const_iterator last );

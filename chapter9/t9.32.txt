@@ -1,0 +1,7 @@
+首先，这个式子有表达式求值顺序未定义的风险，参考以下文档
+①http://www.math.pku.edu.cn/teachers/qiuzy/technotes/expression2009.pdf
+②https://zh.cppreference.com/w/cpp/language/eval_order
+另外
+在Ubuntu 16.04 gcc 5.4上，iter = vi.insert(iter, *iter++)的执行结果是，复制的值插入进去了，然后iter指向两个相同值的第二个
+这样，当原容器最后一个奇数时，插入完毕后，iter就指向了最后一个元素，再执行iter+=2，已经指向“尾后”元素的后一个，相当于.end()的后一个，此时iter已经指向不正确的地方,
+再比较 != .end() 时就再次进入循环并解引用，此时会产生运行时错误。
