@@ -32,7 +32,7 @@
 *.app
 
 # xmake script
-xmake.lua
+# xmake.lua
 .xmake/*
 build/*
 # temp vscode files
