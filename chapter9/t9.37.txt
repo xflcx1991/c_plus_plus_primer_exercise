@@ -1,0 +1,2 @@
+list是链表结构，添加删除元素非常快，没必要做capacity这种设计。
+array是初始化时固定大小的，也不需要capacity。

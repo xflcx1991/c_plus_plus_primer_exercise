@@ -1,0 +1,1 @@
+应该在读取存入string前对string执行reserve(100)
