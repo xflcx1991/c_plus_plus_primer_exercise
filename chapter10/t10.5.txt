@@ -1,0 +1,2 @@
+如果是char *，会有警告warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+如果是const char *或者char const *没有警告
