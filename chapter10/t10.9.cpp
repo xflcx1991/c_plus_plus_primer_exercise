@@ -1,6 +1,5 @@
-#include <iostream>
-#include <iterator>
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 using std::cin;

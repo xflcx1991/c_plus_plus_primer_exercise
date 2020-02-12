@@ -1,8 +1,8 @@
 //在7.26基础上改
+#include <iostream>
 #include <istream>
 #include <ostream>
 #include <string>
-#include <iostream>
 
 class Sales_data
 {
@@ -12,9 +12,9 @@ class Sales_data
 
 public:
     Sales_data();
-    Sales_data(const std::string &s);
+    explicit Sales_data(const std::string &s);
     Sales_data(const std::string &s, unsigned n, double p);
-    Sales_data(std::istream &is);
+    explicit Sales_data(std::istream &is);
 
     std::string isbn() const { return bookNo; }
     Sales_data &combine(const Sales_data &);
@@ -35,7 +35,7 @@ std::ostream &print(std::ostream &, const Sales_data &);
 std::istream &read(std::istream &, Sales_data &);
 //----------声明结束-----------------
 
-Sales_data::Sales_data(): Sales_data("<->")
+Sales_data::Sales_data() : Sales_data("<->")
 {
     std::cout << "Sales_data()" << std::endl;
 }
