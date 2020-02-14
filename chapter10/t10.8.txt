@@ -1,3 +1,15 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
 严格来说，标准库算法根本不知道有“容器”这个东西。它们只接受迭代器参数，运行于这些迭代器之上，通过这些迭代器来访问元素。
 
 因此，当你传递给算法普通迭代器时，这些迭代器只能顺序或随机访问容器中的元素，造成的效果就是算法只能读取元素、改变元素值、移动元素，但无法添加或删除元素。

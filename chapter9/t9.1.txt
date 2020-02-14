@@ -1,3 +1,15 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
 （a）vector。array虽然数量固定但是不可添加元素，题目要求要排序操作后插入到容器中，指明不能采用初始化的方式使用array
 （b）deque。根据题目描述，这是典型的双端队列的应用场景。
 （c）list。根据题目描述，需要在容器中间进行调换，这是链表应用的场景。forward_list应该也可以。
