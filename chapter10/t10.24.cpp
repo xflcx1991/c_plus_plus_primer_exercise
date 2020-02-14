@@ -10,8 +10,9 @@
 * See the Mulan PSL v2 for more details.
 *************************************************************************************/
 
-//在t10.19上修改
+//在t10.22上修改
 #include <algorithm>
+#include <functional>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -20,16 +21,25 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
+using namespace std::placeholders;
+
+bool check_size(const string &str, string::size_type sz);
 
 int main()
 {
-    vector<string> mvec = {"the", "quick", "red", "fox", "jumps", "over", "the", "slow", "red", "turtle"};
-    //只统计有多少单词大于等于6
-    //这里如果写const，lambda捕获列表就不用写length了
-    string::size_type length = 6;
-    auto searchSize = [length](const string &str) { return str.size() >= length; };
-    auto count = std::count_if(mvec.cbegin(), mvec.cend(), searchSize);
+    string str1 = "hello";
+    vector<int> mvec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
-    //根据count打印“word”单词的单数或者复数形式
-    cout << count << endl;
+    auto callable = std::bind(check_size, str1, _1);
+
+    auto iter = std::find_if(mvec.cbegin(), mvec.cend(), callable);
+    cout << "这个数是" << *iter << endl;
+
+    return 0;
+}
+
+// sz是find_if提取的每一个容器里的int元素
+bool check_size(const string &str, string::size_type sz)
+{
+    return sz >= str.size();
 }

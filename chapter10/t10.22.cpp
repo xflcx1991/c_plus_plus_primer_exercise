@@ -10,8 +10,10 @@
 * See the Mulan PSL v2 for more details.
 *************************************************************************************/
 
-//在t10.19上修改
+//在t10.20上修改
+//个人感觉bind真是蛋疼就用lambda不就行了
 #include <algorithm>
+#include <functional>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -20,16 +22,24 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
+using namespace std::placeholders;
+
+bool searchSize(const string &str, string::size_type sz);
 
 int main()
 {
     vector<string> mvec = {"the", "quick", "red", "fox", "jumps", "over", "the", "slow", "red", "turtle"};
-    //只统计有多少单词大于等于6
-    //这里如果写const，lambda捕获列表就不用写length了
+    //只统计有多少单词小于等于6
     string::size_type length = 6;
-    auto searchSize = [length](const string &str) { return str.size() >= length; };
-    auto count = std::count_if(mvec.cbegin(), mvec.cend(), searchSize);
+
+    auto search = std::bind(searchSize, _1, length);
+    auto count = std::count_if(mvec.cbegin(), mvec.cend(), search);
 
     //根据count打印“word”单词的单数或者复数形式
     cout << count << endl;
+}
+
+bool searchSize(const string &str, string::size_type sz)
+{
+    return str.size() <= sz;
 }

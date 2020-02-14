@@ -1,0 +1,15 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+可以接受不定数目的参数
+auto newCallable = bind(callable, arg_list)
+实际调用时是callable(arg_list)，arg_list可为空（可以代码验证），所以bind至少有一个参数（但是一个参数的bind不是闲的无聊吗）
