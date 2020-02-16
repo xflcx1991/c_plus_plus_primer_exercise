@@ -1,0 +1,38 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+根据P366所列
+输入迭代器（input iterator)
+    支持== !=
+    支持前置后置++
+    支持解引用*，且解引用只能出现在赋值符的右边（为了只可读，不可写？）
+    箭头运算符->
+    只能顺序访问，不能保证输入迭代器状态可以保存下来用来访问元素
+输出迭代器（output iterator）
+    前置后置++
+    解引用运算符*，只能出现赋值符的左边
+前向迭代器（forward iterator）
+    可以读写
+    只能沿一个方向移动
+    可以保存前向迭代器的状态
+双向迭代器（bidirectional iterator）
+    正向/反向
+    可以读写
+    支持前置后置--
+    典型的如list的迭代器
+随机访问迭代器（random-access iterator）
+    在常量时间内访问序列中任意元素
+    支持双向迭代器的所有功能
+    支持关系运算符
+    支持和整数的加减运算
+    支持两个迭代器的减法-，得到两者的距离
+    支持下表运算符（iter[n]），与*(iter+2)等价（原书是「与*(iter[2])等价，估计是写错了」

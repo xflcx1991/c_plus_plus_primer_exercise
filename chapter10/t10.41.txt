@@ -1,0 +1,21 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+有趣，还有猜的题。
+replace(beg,end,old_val,new_val)
+    在beg到end（取不到）范围内，把等于old_val的位置上改成new_val
+replace_if(beg,end,pred,new_val)
+    在beg到end（取不到）范围内，把能够让pred为真的位置上改成new_val
+replace_copy(beg,end,dest,old_val,new_val)
+    把beg到end（取不到）范围的值写入到dest，并把所有old_val改成new_val
+replace_copy_if(beg,end,dest,pred,new_val)
+    把beg到end（取不到）范围的值写入到dest，并把所有能够让pred为真的位置上改成new_val

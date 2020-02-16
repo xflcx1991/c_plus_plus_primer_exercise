@@ -1,0 +1,52 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+copy的前两个参数至少要支持输入迭代器，第三个参数至少要支持输出迭代器
+reverse 双向迭代器（因为要两个方向移动，还要交换值即改写）
+unique 前向迭代器（因为要移动值即改写，看源码没有--操作）
+来自devdocs.io
+/**
+First version
+template<class ForwardIt>
+ForwardIt unique(ForwardIt first, ForwardIt last)
+{
+    if (first == last)
+        return last;
+ 
+    ForwardIt result = first;
+    while (++first != last) {
+        if (!(*result == *first) && ++result != first) {
+            *result = std::move(*first);
+        }
+    }
+    return ++result;
+}
+Second version
+template<class ForwardIt, class BinaryPredicate>
+ForwardIt unique(ForwardIt first, ForwardIt last, BinaryPredicate p)
+{
+    if (first == last)
+        return last;
+ 
+    ForwardIt result = first;
+    while (++first != last) {
+        if (!p(*result, *first) && ++result != first) {
+            *result = std::move(*first);
+        }
+    }
+    return ++result;
+}
+
+
+
+
+*/
