@@ -1,0 +1,17 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+list适合大量同类数据频繁插入删除的场景
+vector适合大量同类数据频繁访问的场景
+deque适合做消息队列，集合了list，vector的优点，但有测试数据表明在中间插入和删除是deque的弱项（http://www.cppblog.com/sailing/articles/161659.html）
+map适合存储键值对，比如人的各项信息（姓名：xxx，性别：xxx，年龄：xxx等）、
+set适合存储不重复的关键字集合（常常可见于xxx池），比如检查要登录的用户名是否在已登录用户池
