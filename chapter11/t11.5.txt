@@ -1,0 +1,16 @@
+/*************************************************************************************
+* Copyright (c) 2019 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+摘自t11.2.txt
+map适合存储键值对，比如人的各项信息（姓名：xxx，性别：xxx，年龄：xxx等）、
+set适合存储不重复的关键字集合（常常可见于xxx池），比如检查要登录的用户名是否在已登录用户池
+适合的场景就是选择的依据
