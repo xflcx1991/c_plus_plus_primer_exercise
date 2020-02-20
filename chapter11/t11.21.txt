@@ -1,0 +1,27 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+原题中，
+map<string, size_t> word_count;
+string word;
+while(cin >> word)
+    ++word_count.insert({word, 0}).first->second;
+
+.和->操作符优先级均高于前置++操作，所以作用是，读入一个字符串存入word，尝试往word_count这个map插入word为关键字，0为对应值的pair。
+如果插入成功，把刚刚插入的0值自增变为1；如果容器已有该关键字，那就把该关键字对应的值自增。最后这句话的效果等同于上一题的
+        auto ret = mmap.insert({word, 1});
+        if (!ret.second)
+        {
+            //如果已经有了上面的insert插入失败，那就递增既有值
+            ++ret.first->second; //ret是一个pair，first成员是一个迭代器指向关键字元素（即map里的pair），它的second就是输入的单词的统计值
+        }
+只是本题的写法更简洁，但不如上一题的可读性好。
