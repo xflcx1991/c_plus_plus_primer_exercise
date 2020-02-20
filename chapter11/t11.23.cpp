@@ -10,9 +10,11 @@
 * See the Mulan PSL v2 for more details.
 *************************************************************************************/
 
+//在t11.7基础上改
 #include <iostream>
 #include <limits>
 #include <map>
+#include <set>
 #include <string>
 #include <vector>
 
@@ -20,6 +22,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::multimap;
+using std::set;
 using std::string;
 using std::vector;
 
@@ -32,7 +35,6 @@ int main()
     {
         cout << "请输入家庭的姓" << endl;
         cin >> familyName;
-        cout << familyName << endl;
         cout << "请输入家中孩子们的名字，输入0开始重新输入新家庭，放弃输入ctrl+D结束" << endl;
         //以ctrl+D解决不了再次输入的问题，clear都不行，放弃处理这种情况遇到直接退出程序
         while (cin >> firstName)
@@ -62,19 +64,22 @@ int main()
     }
 
     cout << "显示结果" << endl;
+    //没有内置方法能每个key只遍历一遍，先放进set里，自动过滤一道
+    set<string> keyMulmap;
     for (const auto &item : mulmap)
     {
-        cout << "家族：" << item.first << " 有" << mulmap.count(item.first) << " 个孩子" << endl;
-        cout << "分别是：";
-        auto iter = item.second.cbegin();
-        for (++iter; iter != item.second.cend(); ++iter)
+        keyMulmap.insert(item.first);
+    }
+    //所有unique key得到了
+    for (const auto &item : keyMulmap)
+    {
+        cout << "家族：" << item << " 的孩子：";
+        for (auto pos = mulmap.equal_range(item);
+             pos.first != pos.second; ++pos.first)
         {
-            cout << *iter << ",";
+
+            cout << pos.first->second << " ";
         }
-        // for (const auto &tempName : item.second)
-        // {
-        //     cout << tempName << ",";
-        // }
         cout << endl;
     }
 
