@@ -9,25 +9,16 @@ Xmake is recommended  as a build system
 
 
 #### 目前进度
-A.B, as same as the exercise number in the book
-
-1.25
-
-2.40
-
-6.54-6.56
-
-7.1-7.58
-
-8.1-8.14
-
-9.1-9.42
-
-10.1-10.25
-
-10.34-10.42
-
-11.1-11.32
+A.B, as same as the exercise number in the book<br/>
+1.25<br/>
+2.40<br/>
+6.54-6.56<br/>
+7.1-7.58<br/>
+8.1-8.14<br/>
+9.1-9.42<br/>
+10.1-10.25<br/>
+10.34-10.42<br/>
+11.1-11.32<br/>
 
 
 #### Contribution
