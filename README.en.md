@@ -1,22 +1,25 @@
 # c_plus_plus_primer_exercise
 
-#### Description
-C++ Primer（第5版）课后练习题解答
-Comming soon!
-#### Software Architecture
-Software architecture description
+#### 介绍
+Exercise example for "C++ Primer,5E"
 
-#### Installation
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 软件架构
+Xmake is recommended  as a build system
 
-#### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 目前进度
+A.B, as same as the exercise number in the book
+1.25
+2.40
+6.54-6.56
+7.1-7.58
+8.1-8.14
+9.1-9.42
+10.1-10.25
+10.34-10.42
+11.1-11.31
+
 
 #### Contribution
 
