@@ -18,7 +18,7 @@ A.B, as same as the exercise number in the book
 9.1-9.42
 10.1-10.25
 10.34-10.42
-11.1-11.31
+11.1-11.32
 
 
 #### Contribution
