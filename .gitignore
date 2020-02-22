@@ -39,6 +39,8 @@ build/*
 .vscode/*
 
 # other
-test.cpp
+/*.cpp
+/*.h
+# test.cpp
 lib/*
 include/*

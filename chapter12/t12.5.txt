@@ -1,0 +1,18 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+这个题目里我们就是想让程序支持
+StrBlob b2 = {"a", "an", "the"};
+这样的写法，所以不能用explicit.
+
+优点：当想禁止构造函数隐式转换的场合就用explicit，可以强制使用时清楚的给定类型，避免乱写和无意识的通过了不正常的写法
+缺点：新建对象时会稍稍麻烦些
