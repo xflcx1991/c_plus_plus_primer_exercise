@@ -1,0 +1,16 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+int *q = new int(42), *r = new int(100); //声明并初始化两个指针q，r，分别指向的值是42,100
+r = q; //让r也指向42的空间，100的空间没人指向，内存泄漏
+auto q2 = make_shared<int>(42), r2 = make_shared<int>(100); //声明并初始化两个智能指针q2，r2，值分别是42,100
+r2 = q2; //让r2也指向q2所指向的空间，并释放掉原来r2指向的100的空间，没有内存泄漏

@@ -1,0 +1,15 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+正确，只是看起来啰嗦。不过实际上性能似乎没有收到影响，进入process后引用计数还是2，没有因为临时变量而变成3。
+这里有个同类问题，有人回答说是移动拷贝的缘故或是编译器优化。我用的是-O0，应该禁用了优化。
+https://bbs.csdn.net/topics/392380906?page=1
