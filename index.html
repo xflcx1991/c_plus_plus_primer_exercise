@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="icon" href="/docs/_media/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport"
@@ -15,16 +16,19 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      name: 'c++ primer 第5版练习题',
+      nameLink: '/',
+      repo: 'https://gitee.com/xffish/c_plus_plus_primer_exercise',
+      auto2top: true,
+      //important
+      homepage: 'home.md',
+      coverpage: true,
+      //logo: '/docs/_media/icon.svg'
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
-    }
-  </script>
+    <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-cpp.min.js"></script>
 </body>
 
 </html>
