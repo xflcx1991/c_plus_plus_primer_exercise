@@ -10,7 +10,8 @@
 * Multiple themes
 * Not build static html files
 ---
-[![star](https://gitee.com/xffish/c_plus_plus_primer_exercise/badge/star.svg?theme=dark)](https://gitee.com/xffish/c_plus_plus_primer_exercise/stargazers)
+[![star](https://gitee.com/xffish/c_plus_plus_primer_exercise/badge/star.svg?theme=dark)](https://gitee.com/xffish/c_plus_plus_primer_exercise/stargazers)<br/>
+[![Fork me on Gitee](https://gitee.com/xffish/c_plus_plus_primer_exercise/widgets/widget_3.svg?color=1ec737)](https://gitee.com/xffish/c_plus_plus_primer_exercise)
 
 [Gitee](https://gitee.com/xffish/c_plus_plus_primer_exercise)
 [Get Started](#headline)

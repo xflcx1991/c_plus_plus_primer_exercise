@@ -2,7 +2,8 @@
 
 #### 介绍
 Exercise example for "C++ Primer,5E"
-
+visit https://xffish.gitee.io/c_plus_plus_primer_exercise to get better experience of reading code(beta)
+gitee is the main repository and github is the backup.
 
 #### 软件架构
 Xmake is recommended  as a build system
