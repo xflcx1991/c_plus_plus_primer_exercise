@@ -1,8 +1,8 @@
 # c_plus_plus_primer_exercise
 
 #### 介绍
-C++ Primer（第5版）课后练习题解答
-访问 https://xffish.gitee.io/c_plus_plus_primer_exercise 获得更好的代码阅读体验（beta）
+C++ Primer（第5版）课后练习题解答<br/>
+访问 https://xffish.gitee.io/c_plus_plus_primer_exercise 获得更好的代码阅读体验（beta）<br/>
 gitee 是主仓库，github 作为备份。
 
 #### 软件架构

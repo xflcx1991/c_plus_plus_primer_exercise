@@ -88,7 +88,7 @@ void print(const connection &conn)
 void f(destination &d)
 {
     connection c = connect(&d);
-
+    //这是本题重点
     shared_ptr<connection> p(&c, [](connection *p) { disconnect(*p); });
     //会自动调用end_connection
     //不能把这个智能指针就这样return出去，因为一出去c就被销毁了，等到传出的智能指针自动销毁时c已经不存在了
