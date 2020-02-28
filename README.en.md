@@ -20,8 +20,8 @@ A.B, as same as the exercise number in the book<br/>
 10.1-10.25<br/>
 10.34-10.42<br/>
 11.1-11.32<br/>
-12.1-12.5<br/>
-
+12.1-12.18<br/>
+13.1-13.5<br/>
 
 #### Contribution
 

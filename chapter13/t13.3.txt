@@ -1,0 +1,14 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+拷贝一个 StrBlob 会拷贝 std::shared_ptr<std::vector<std::string>> data 这个变量，并使得引用计数加1
+拷贝一个 StrBlobPtr 会拷贝 std::weak_ptr<std::vector<std::string>> wptr 和 std::size_it curr 这两个变量，前者不会导致引用计数加1，后者是个简单的值拷贝

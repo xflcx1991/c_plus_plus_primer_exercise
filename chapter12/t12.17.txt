@@ -1,0 +1,20 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+int ix=1024,*pi=&ix,*pi2=new int(2048);
+typedef unique_ptr<int> IntP;
+(a)IntP p0(ix) 错误，p0要用int *类型初始化
+(b)IntP p1(pi) 编译能通过，但是运行有错误。unique_ptr需要new返回的指针赋值
+(c)IntP p2(pi2) 正确
+(d)IntP p3(&ix) 编译能通过，但是运行有错误。unique_ptr需要new返回的指针赋值
+(e)IntP p4(new int(2048)) 正确
+(f)IntP p5(p2.get()) 合法，但p5和p2实际指向同一块内存，但是是各自独立的。后续会导致这块内存被释放两次。
