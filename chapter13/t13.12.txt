@@ -1,0 +1,20 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+一共三次
+
+bool fcn(const Sales_data *trans, Sales_data accum) // accum是拷贝构造函数生成的新对象
+{
+    Sales_data item1(*trans), item2(accum); //item1，item2是新对象
+    return item1.isbn() != item2.isbn();
+}
+//函数执行后 按照item2，item1，accum的顺序依次调用对应的析构函数

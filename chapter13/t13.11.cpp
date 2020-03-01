@@ -10,6 +10,7 @@
 * See the Mulan PSL v2 for more details.
 *************************************************************************************/
 
+//完全照搬t13.8
 #include <iostream>
 #include <string>
 
@@ -25,6 +26,16 @@ public:
     }
     HasPtr(const HasPtr &source) : ps(new string(*source.ps)), i(source.i)
     {
+    }
+    HasPtr &operator=(const HasPtr &source)
+    {
+        auto tempPtr = new string(*source.ps);
+        delete ps;
+
+        ps = tempPtr;
+        i = source.i;
+
+        return *this;
     }
     ~HasPtr()
     {
@@ -50,7 +61,7 @@ int main()
     hp3.showInfo();
     HasPtr hp4("banana");
     hp4.showInfo();
-    hp4 = hp3; //有内存泄露，还未重载拷贝赋值运算符
+    hp4 = hp3; //现在没有内存泄露了
     hp4.showInfo();
     return 0;
 }

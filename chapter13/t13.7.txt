@@ -1,0 +1,17 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+StrBlob 代码在t12.2.cpp，书本P405
+StrBlob类有一个 std::shared_ptr<std::vector<std::string>> data 的变量，当发生赋值的时候，会拷贝一个智能指针，其引用计数会加1
+
+StrBlobPtr 代码在书本P421
+StrBlobPtr发生拷贝时，会拷贝一个弱指针std::weak_ptr<std::vector<std::string>>，引用计数不变
