@@ -1,0 +1,14 @@
+/*************************************************************************************
+* Copyright (c) 2020 xffish
+* c_plus_plus_primer_exercise is licensed under Mulan PSL v2.
+* You can use this software according to the terms and conditions of the Mulan PSL v2.
+* You may obtain a copy of Mulan PSL v2 at:
+* http://license.coscl.org.cn/MulanPSL2
+* THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+* EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+* MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+* See the Mulan PSL v2 for more details.
+*************************************************************************************/
+
+会改变，确实会输出三次不一样的序号，但程序结果是错误的，f函数没有实现打印给定 numbered 对象的mysn值的功能。
+因为调用void f(numbered s)时是传值，又会发生拷贝，然后又生成一个新的序号。
